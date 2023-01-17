@@ -69,7 +69,7 @@ cl = NaiveBayesClassifier(train)
 
 # ------------ CSV wird mit sentiment analysiert
 
-data = pd.read_csv('../Data_Scraping/YoutubeComments.csv', on_bad_lines='skip')
+data = pd.read_csv('../csv/YoutubeComments.csv', on_bad_lines='skip')
 
 count = 0
 
