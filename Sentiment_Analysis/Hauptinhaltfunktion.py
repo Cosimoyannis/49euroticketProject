@@ -14,14 +14,16 @@ for comment in comments["comments"]:
     main_content = comment + " Thema: "
     if "Auto" in comment:
         main_content += str('Man diskutiert über 49euro Ticket in Sinne von Autofahrer')
-    elif "Klima" in comment:
+    elif "Klima" in comment or "umweltfreundlich" in comment:
         main_content += str('Es geht um Thema Klimaschutz')
     elif "Entlastung" in comment:
         main_content += str('Man findet 49Euro Ticket als Entlastung von Ausgabe')
-    elif "Regierung" in comment and "besser" in comment or "gut" in comment:
-        main_content += str('Regierung gut')
-    elif "zusätzlich" in comment and "Regionalticket" in comment:
-        main_content += str('Man könnte noch zusätzlich anbieten')
+    elif "Regierung" or "Politik" in comment or "politisch" in comment or "Bundesregierung" in comment:
+        main_content += str('Es geht um Regierung')
+    elif "Preis" in comment or "günstig" in comment or "teuer" in comment or "sparsam" in comment or "sparen" in comment:
+        main_content += str('Man diskutiert über Preis')
+    elif "9 Euro Ticket" in comment or "9euro" in comment:
+        main_content += str('Man vergleicht 49 Euro Ticket mit 9 Euro Ticket')
     else: main_content += str('Random Content')
     print(main_content)
     df = pd.DataFrame({'main_content': [main_content]})
