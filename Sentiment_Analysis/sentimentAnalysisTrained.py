@@ -55,17 +55,17 @@ while (count < 10):
     print("Themen: ")
 
     main_content = ""   
-    if "teuer" in textStringRegexTwo or "günstig" in textStringRegexTwo:
+    if "teuer" in textStringRegexTwo or "günstig" in textStringRegexTwo or "schnapper" in textStringRegexTwo or "reich" in textStringRegexTwo or "bezahlen" in textStringRegexTwo or "finanziell" in textStringRegexTwo or "überteuert" in textStringRegexTwo or "billig" in textStringRegexTwo:
             main_content += str('Preis, ')
 
-    elif "Regierung" in textStringRegexTwo or "Politik" in textStringRegexTwo:
+    elif "Regierung" in textStringRegexTwo or "Politik" in textStringRegexTwo or "politisch" in textStringRegexTwo or "politisch" in textStringRegexTwo or "debatte" in textStringRegexTwo or "demokratie" in textStringRegexTwo or "bundeskanzler" in textStringRegexTwo or "gesetz" in textStringRegexTwo or "gesetze" in textStringRegexTwo or "bundestag" in textStringRegexTwo or "bundesland" in textStringRegexTwo or "land" in textStringRegexTwo:
             main_content += str('Politik, ')
 
-    elif "Klima" in textStringRegexTwo or "umweltfreundlich" in textStringRegexTwo:
+    elif "Klima" in textStringRegexTwo or "umweltfreundlich" in textStringRegexTwo or "klimafreundlich" in textStringRegexTwo or "umwelt" in textStringRegexTwo or "umweltverschmutzung" in textStringRegexTwo or "treibhausgase" in textStringRegexTwo or "co2" in textStringRegexTwo or "luftverschmutzung" in textStringRegexTwo or "umweltfreundlich" in textStringRegexTwo or "energie" in textStringRegexTwo or "treibstoff" in textStringRegexTwo:
             main_content += str('Umwelt, ')
 
-    elif "das" in textStringRegexTwo or "die" in textStringRegexTwo:
-            main_content += str('das oder die, ')  
+    elif "das" in textStringRegexTwo or "auto" in textStringRegexTwo or "automobil" in textStringRegexTwo or "autobahn" in textStringRegexTwo or "kfz" in textStringRegexTwo or "kraftfahrzeug" in textStringRegexTwo or "straße" in textStringRegexTwo or "straßen" in textStringRegexTwo or "sprit" in textStringRegexTwo or "spritverbrauch" in textStringRegexTwo:
+            main_content += str('Auto, ')  
 
     else: main_content += str('undefinierbares Thema')
 

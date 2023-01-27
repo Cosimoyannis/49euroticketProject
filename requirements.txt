@@ -7,7 +7,6 @@ lxml
 pymysql
 tweepy
 textblob_de
-textblob_de
 numpy
 random
 re
