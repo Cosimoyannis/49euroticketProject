@@ -5,7 +5,7 @@ from iteration_utilities import unique_everseen
 import csv
 
 from Data_Scraping.YouTubeScraping.utils.comments import process_comments, make_csv
-#from Data_Scraping.YouTubeScraping.utils.comments import process_comments, make_csv
+
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
