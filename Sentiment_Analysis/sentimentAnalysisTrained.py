@@ -64,7 +64,7 @@ while (count < 10):
     elif "Klima" in textStringRegexTwo or "umweltfreundlich" in textStringRegexTwo or "klimafreundlich" in textStringRegexTwo or "umwelt" in textStringRegexTwo or "umweltverschmutzung" in textStringRegexTwo or "treibhausgase" in textStringRegexTwo or "co2" in textStringRegexTwo or "luftverschmutzung" in textStringRegexTwo or "umweltfreundlich" in textStringRegexTwo or "energie" in textStringRegexTwo or "treibstoff" in textStringRegexTwo:
             main_content += str('Umwelt, ')
 
-    elif "das" in textStringRegexTwo or "auto" in textStringRegexTwo or "automobil" in textStringRegexTwo or "autobahn" in textStringRegexTwo or "kfz" in textStringRegexTwo or "kraftfahrzeug" in textStringRegexTwo or "straße" in textStringRegexTwo or "straßen" in textStringRegexTwo or "sprit" in textStringRegexTwo or "spritverbrauch" in textStringRegexTwo:
+    elif "fahrzeug" in textStringRegexTwo or "auto" in textStringRegexTwo or "automobil" in textStringRegexTwo or "autobahn" in textStringRegexTwo or "kfz" in textStringRegexTwo or "kraftfahrzeug" in textStringRegexTwo or "straße" in textStringRegexTwo or "straßen" in textStringRegexTwo or "sprit" in textStringRegexTwo or "spritverbrauch" in textStringRegexTwo:
             main_content += str('Auto, ')  
 
     else: main_content += str('undefinierbares Thema')
