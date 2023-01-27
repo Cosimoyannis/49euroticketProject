@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from googleapiclient.discovery import Ybuild
+from googleapiclient.discovery import build
 from iteration_utilities import unique_everseen
 import csv
 
@@ -10,7 +10,6 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 youtube = build("youtube", "v3", developerKey=API_KEY)
-
 
 def search_result(query):
     """
@@ -24,7 +23,6 @@ def search_result(query):
 
     return request.execute()
 
-
 def channel_stats(channelID):
     """
     Refer to the documentation: https://googleapis.github.io/google-api-python-client/docs/dyn/youtube_v3.channels.html
@@ -35,10 +33,10 @@ def channel_stats(channelID):
     )
     return request.execute()
 
-
 def comment_threads(channelID, to_csv=False):
+    
     comments_list = []
-
+    
     request = youtube.commentThreads().list(
         part='id,replies,snippet',
         videoId=channelID,
@@ -59,10 +57,10 @@ def comment_threads(channelID, to_csv=False):
     comments_list = list(unique_everseen(comments_list))
 
     print(f"Finished fetching comments for {channelID}. {len(comments_list)} comments found.")
-
+    
     if to_csv:
         make_csv(comments_list, channelID)
-
+    
     return comments_list
 
 
@@ -71,7 +69,7 @@ def get_video_ids(channelId):
     Refer to the documentation: https://googleapis.github.io/google-api-python-client/docs/dyn/youtube_v3.search.html
     """
     videoIds = []
-
+ 
     request = youtube.search().list(
         part="snippet",
         channelId=channelId,
@@ -95,18 +93,19 @@ def get_video_ids(channelId):
         responseItems = response['items']
 
         videoIds.extend([item['id']['videoId'] for item in responseItems if item['id'].get('videoId', None) != None])
-
+    
     print(f"Finished fetching videoIds for {channelId}. {len(videoIds)} videos found.")
 
     return videoIds
 
 
+
 if __name__ == '__main__':
     pyscriptVidId = 'jeEU-2JPzFY'
-    # channelId = 'UCzIxc8Vg53_ewaRIk3shBug'
+    #channelId = 'UCzIxc8Vg53_ewaRIk3shBug'
 
-    # response = search_result("pyscript")
-    # response = channel_stats(channelId)
+    #response = search_result("pyscript")
+    #response = channel_stats(channelId)
     response = comment_threads(pyscriptVidId, to_csv=True)
 
     print(response)
