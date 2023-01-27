@@ -6,6 +6,9 @@ Hierbei handelt es sich um ein "gecleantes" Projekt bei dem nur die nötigsten D
 
 Vorbereitung 
 
+Python Umgebung
+-> $ conda activate "pythonumgebung"
+
 requirements.txt installieren
     -> $ pip install -r requirements.txt
 
@@ -66,4 +69,5 @@ Diese Datei kann nun als Quelle zum analysieren genutzt werden.
 Kommentaranalyse starten: 
 
 -> $ conda activate "pythonumgebung"
+-> $ pip install -r requirements.txt
 -> $ python run sentimentAnalysisTrained.py
