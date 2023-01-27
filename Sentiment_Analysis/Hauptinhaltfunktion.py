@@ -23,7 +23,7 @@ for comment in comments["comments"]:
     elif "Politik" in comment or "politisch" in comment or "Bundesregierung" in comment or "Regierung" in comment:
         main_content += str('Man redet von Politik')
     elif "Arbeit" in comment or "Job" in comment:
-        main_content += str('Man diskutiert über Fahrt zu/von Arbeit')
+        main_content += str('Man redet von Fahrt zu/von Arbeit')
     elif "9 Euro Ticket" in comment or "9euro" in comment:
         main_content += str('Man vergleicht 49 Euro Ticket mit 9 Euro Ticket')
     elif "Digitalisierung" in comment or "digital" in comment:
