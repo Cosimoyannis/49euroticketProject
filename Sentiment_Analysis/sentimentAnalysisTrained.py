@@ -17,7 +17,7 @@ cl = NaiveBayesClassifier(train)
 
 # ------------ CSV wird mit trainiertem sentiment modell analysiert
 
-data = pd.read_csv('../csv/YoutubeComments.csv', on_bad_lines='skip')
+data = pd.read_csv('../csv/TheFinalCombinedDatasetOneLine.csv', on_bad_lines='skip')
 
 count = 0
 
@@ -41,7 +41,23 @@ while (count < 10):
 
     print(blob.classify())
 
+
+
+
+   
+
+
+
     count = count + 1
+
+
+
+
+
+
+
+
+
 
 else: 
     print(" ") 
