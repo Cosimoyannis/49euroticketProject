@@ -25,9 +25,27 @@ In dem Ordner: workingCSV
 
 Wie sind wir zu dem finalen Datensatz gekommen?
 
+1.
 Twitter:
 $python run Data_Scraping/ScrapeTwitterUpdatedFull_Archive.py
 
+2.
 Youtube:
-$python run Data_Scraping/ScrapeYouTube.py
+$python run Data_Scraping/YouTubeScraping/yt_public.py
+
+3.
+Überflüssige Spalten wurden manuell gelöscht in Numbers gelöscht, sodass nur noch zwei Spalten übrig sind.
+Eine von den Spalten sollte die Kommentare enthalten und die andere Spalte sollte leer sein.
+
+4.
+Kombination von beiden Datensätzen 
+
+4.1 
+$cd "Ordner an dem sich die zu kombinierenden CSV Dateien befinden"
+4.2
+$cat *.csv >combined.csv
+
+5. 
+Die leere Spalte sollte nun gelöscht werden, sodass nur noch eine Spalte übrig bleibt.
+
 
