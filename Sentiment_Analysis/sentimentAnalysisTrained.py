@@ -17,14 +17,10 @@ cl = NaiveBayesClassifier(train)
 
 # ------------ CSV wird mit trainiertem sentiment modell analysiert
 
-<<<<<<< HEAD
-data = pd.read_csv('../csv/TheFinalCombinedDatasetOneLine.csv', on_bad_lines='skip')
-=======
-data = pd.read_csv('../csv/YoutubeComments.csv', on_bad_lines='warn', encoding='utf-8', sep='\t')
->>>>>>> edcc67ebcef3eb7fefa5a112170045dbe1c43f0a
+data = pd.read_csv('./workingCSV/TheFinalCombinedDatasetOneLine.csv', on_bad_lines='skip', encoding='utf-8', sep='\t')
 
-#print("2")
 count = 0
+
 
 while (count < 10):
 
@@ -34,7 +30,9 @@ while (count < 10):
 
     textStringRegex = re.sub('[^ ]*http[^ ]*', '', textString)
 
-    textStringRegexTwo = re.sub('[@#]', '', textStringRegex)    
+    textStringRegexTwo = re.sub('[@#]', '', textStringRegex)   
+
+# Sentiment  
 
     blob = TextBlob(textStringRegexTwo, classifier=cl)
     sentiment = blob.sentiment.polarity 
@@ -42,18 +40,70 @@ while (count < 10):
     print(" ") 
     print("----------------")
     print(" ") 
+    print("Text: ") 
     print(textStringRegexTwo)
 
+    print(" ") 
+    print("Sentiment: ") 
     print(blob.classify())
 
 
 
+# Themen 
 
-   
+    print(" ") 
+    print("Themen: ")
+
+    main_content = ""   
+    if "teuer" in textStringRegexTwo or "günstig" in textStringRegexTwo:
+            main_content += str('Preis, ')
+
+    elif "Regierung" in textStringRegexTwo or "Politik" in textStringRegexTwo:
+            main_content += str('Politik, ')
+
+    elif "Klima" in textStringRegexTwo or "umweltfreundlich" in textStringRegexTwo:
+            main_content += str('Umwelt, ')
+
+    elif "das" in textStringRegexTwo or "die" in textStringRegexTwo:
+            main_content += str('das oder die, ')  
+
+    else: main_content += str('undefinierbares Thema')
+
+    print(main_content)
+    
+
+
+# Hauptaussagen
+
+    print(" ") 
+    print("Hauptaussagen: ")  
+
+    main_message = " ".join(blob.noun_phrases)
+    print(main_message)
+
+
+
 
 
 
     count = count + 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
