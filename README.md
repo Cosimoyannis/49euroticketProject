@@ -1,10 +1,14 @@
-To Do:
+Hierbei handelt es sich um ein "gecleantest" Projekt bei dem unnötige Dateien gelöscht worden sind.
+
+Was befindet sich wo?
 
 
-- Retweets werden nicht vollständig angezeigt
+In dem Ordner: Data_Scraping
+    Python Code der zum Erlangen der CSV Datein benötigt wurde.
+    Hier wurden Twitter und Youtube mit Hilfe der jeweiligen API abgefragt.
 
-- zu wenig tweets werden gezogen 
+In dem Ordner: Sentiment_Analysis
+    Python Code um den finalen Kommentar zu analisieren. 
 
-- Zeit hochsetzen zur suche von tweets
-
-- smileys bewerten beim sentiment 
+In dem Ordner: workingCSV
+    Finale CSV Datei mit den Kommentaren von Twitter und Youtube zusammengefügt. 
