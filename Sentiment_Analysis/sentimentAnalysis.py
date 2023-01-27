@@ -4,7 +4,7 @@ import numpy as np
 import random
 import re
 
-data = pd.read_csv('YoutubeComments.csv', on_bad_lines='skip')
+data = pd.read_csv('../csv/YoutubeComments.csv', on_bad_lines='skip')
 
 count = 0
 
